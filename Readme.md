@@ -162,7 +162,7 @@ parseWeatherData('Weather (today): Sunny').value
 //  -> [ 'Weather', ' ', 'today', ': ', 'Sunny' ]
 ```
 
-So the change uses `pipeParsers`, which takes an array of parsers, in order to pass the result of one parser to the next one in the list. `mapTo` lets us get get at the value and map it to something else. In this case we can deconstruct the array that `sequenceOf` returned and just give back the string.
+So the change uses `pipeParsers`, which takes an array of parsers, in order to pass the result of one parser to the next one in the list. `mapTo` lets us get at the value and map it to something else. In this case we can deconstruct the array that `sequenceOf` returned and just give back the string.
 
 Running the same string again, we just get the string we were interested in. Since we also don't care about the "Weather" string, and all the separators, we can use the same technique of `pipeParsers` + `mapTo` to rewrite `fullParser`:
 
